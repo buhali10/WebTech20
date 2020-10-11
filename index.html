@@ -1,10 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Seitentitel</title>
+    <meta charset="UTF-8">
+    <title>HTML Einführung</title>
 </head>
 <body>
-<h1>Das ist eine große Überschrift</h1>
-<p>Das ist ein Absatz.</p>
+<h3>Hyperlinks</h3>
+<a href="http://www.htw-berlin.de" target="_blank">HTW Berlin</a>
+<a href="https://fiw.htw-berlin.de/fileadmin/HTW/Zentral/Rechtsstelle/Amtliche_Mitteilungsblaetter/2014/17_14.pdf">Studienordnung FIW</a>
+<a href="mailto:freiheit@htw-berlin.de">E-Mail an Jörn Freiheit</a>
+
+<h3>Bilder</h3>
+<img src="../Logos/fiw.jpg" alt="FIW-Logo"/>
+
+<h3>Tabelle</h3>
+<table>
+    <thead>
+    <tr>
+        <th>Spalte 1</th>
+        <th>Spalte 2</th>
+        <th>Spalte 3</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1_1</td>
+        <td>1_2</td>
+        <td>1_3</td>
+    </tr>
+    <tr>
+        <td>2_1</td>
+        <td>2_2</td>
+        <td>2_3</td>
+    </tr>
+    <tr>
+        <td>3_1</td>
+        <td>3_2</td>
+        <td>3_3</td>
+    </tr>
+    </tbody>
+</table>
+
+<h3>Listen</h3>
+<ol>
+    <li>eins</li>
+    <li>zwei</li>
+    <li>drei</li>
+</ol>
+
+<ul>
+    <li>eins</li>
+    <li>zwei</li>
+    <li>drei</li>
+</ul>
+
+<ol>
+    <li>
+        <ol>
+            <li>eins_eins</li>
+            <li>eins_zwei</li>
+            <li>eins_drei</li>
+        </ol>
+    </li>
+    <li>zwei</li>
+    <li>
+        <ul>
+            <li>drei_eins</li>
+            <li>drei_zwei</li>
+            <li>drei_drei</li>
+        </ul>
+    </li>
+</ol>
+
+<h3>Eingabeelemente</h3>
+<input type="checkbox" name="SG" value="AI"/> AI<br>
+<input type="checkbox" name="SG" value="FIW" checked/> FIW<br>
+
+<input type="button" value="Click" />
+<input type="reset" />
+<input type="submit" />
+<input type="checkbox" />
+<input type="color" />
+<input type="date" />
+<input type="file" />
+<input type="number" />
+<input type="radio" />
+<input type="image" src="../Logos/fiw.jpg" width="40" alt="FIW-Logo"/>
+<input type="range" min="10" max="100"/>
+<input type="text" placeholder="Name"/>
+<input type="email" placeholder="E-Mail"/>
+<input type="password" />
+
+
 </body>
 </html>
