@@ -1,0 +1,28 @@
+ #logo {
+     float: left;
+}
+ #h1{
+     float: left;
+     padding-left: 25%;
+ }
+
+ ul {
+     list-style-type: none;
+     overflow: hidden;
+     background-color: lightgrey;
+ }
+
+ li {
+     float: left;
+ }
+
+ li a {
+     display: block;
+     color: #FF5F00;
+     text-align: center;
+     text-decoration: none;
+ }
+ li a:hover {
+     color: #0082D1;
+ }
+

@@ -1,0 +1,58 @@
+body {
+    background-color: #AFAFAF;
+    font-family: verdana;
+}
+
+h1 {
+    color: #76B900;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h3 {
+    color: #0082D1;
+    font-variant: small-caps;
+}
+
+p {
+    font-weight: bold;
+}
+
+span {
+    font-style: italic;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    border: 2px solid black;
+}
+
+div {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ff6a3b;
+    border-radius: 5px;
+}
+
+ul,li {
+    background-color: #ff6a3b;
+}
+
+div:hover ~ ul li{
+    display: inline;
+}
+
+div p {
+    display: none;
+}
+
+div:hover p {
+    display: block;
+    background-color: antiquewhite;
+}
+#p1, #p2, #p3 {
+    float:left;
+    width: 31.33%;
+    padding:1%;
+}
