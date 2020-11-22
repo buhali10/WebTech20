@@ -1,0 +1,42 @@
+img{
+    float: left;
+}
+h1 {
+    padding-left: 30%;
+}
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: lightgrey;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #FF5F00;
+    text-align: center;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: #0082D1;
+}
+th, td{
+    height: 50px;
+}
+
+.table-striped > tbody > tr:nth-child(odd):hover{
+    background-color: #76B900;
+}
+
+footer{
+    font-weight: bold;
+    background: #FF5F00;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
