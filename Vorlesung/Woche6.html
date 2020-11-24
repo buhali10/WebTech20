@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>JSON + Array</title>
+</head>
+<body onload="loadJSON()">
+<main class="container m-5">
+    <ul id="ul1" class="list-group">
+
+    </ul>
+</main>
+<script>
+    var members_obj;
+    function loadJSON() {
+        let xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState === 4 && this.status === 200)  {
+                members_obj = JSON.parse(this.responseText);
+                console.log(members_obj);
+                createList();
+            }};
+        xhttp.open("GET", "./members.json", true);
+        xhttp.send();
+    }
+
+    function createList() {
+        let members = members_obj.members;
+        console.log(members_obj);
+        console.log(members_obj.members);
+
+        let ul = document.getElementById('ul1');
+        for(let i=0; i<members.length; i++) {
+            let li = document.createElement('li');
+            li.classList.add('list-group-item');
+            let a = document.createElement('a');
+            a.href = 'mailto:' + members[i].email + '?subject=Webtech&body=Hallo%20FIW!';
+            a.innerHTML = '<i class="fa fa-envelope"> ' + 'to: ' + members[i].forename + ' ' + members[i].surname;
+            li.appendChild(a);
+            ul.appendChild(li);
+        }
+    }
+</script>
+</body>
+</html>
