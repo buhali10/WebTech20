@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax</title>
+</head>
+<body>
+<h2>AJAX wird nachfolgend Daten aus einer JSON-Datei einfügen</h2>
+<div id="div1"></div>
+<button type="button" onclick="loadJSON();">JSON lesen</button>
+<script>
+    function loadJSON() {
+        let xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState === 4 && this.status === 200)  {
+                createFormular(this);
+            }};
+        xhttp.open("GET", "./georg.json", true);
+        xhttp.send();
+    }
+
+    function createFormular(json) {
+        let georg = JSON.parse(json.responseText);
+        console.log(georg);
+        console.log(georg.name);
+        console.log(georg.kinder.erstesKind.name);
+    }
+</script>
+</body>
+</html>

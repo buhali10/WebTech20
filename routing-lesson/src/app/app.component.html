@@ -1,0 +1,48 @@
+<!--
+<h1>Hier ist AppComponent</h1>
+<ul>
+  <li>
+    <a routerLink="/">home</a>
+  </li>
+  <li>
+    <a routerLink="/first">first</a>
+  </li>
+  <li>
+    <a routerLink="/second">second</a>
+  </li>
+</ul>
+<router-outlet></router-outlet>
+-->
+<!--<h1>Hier ist AppComponent</h1>-->
+<!--<ul>-->
+<!--  <li>-->
+<!--    <a [routerLink]="['/']">home</a>-->
+<!--  </li>-->
+<!--  <li>-->
+<!--    <a [routerLink]="['/first']">first</a>-->
+<!--  </li>-->
+<!--  <li>-->
+<!--    <a [routerLink]="['/second']">second</a>-->
+<!--  </li>-->
+<!--</ul>-->
+<!--<router-outlet></router-outlet>-->
+
+<h1>Hier ist AppComponent</h1>
+<ul>
+  <li>
+    <a [routerLink]="['/']">home</a>
+  </li>
+  <li>
+    <a [routerLink]="['/first']">first</a>
+  </li>
+  <li>
+    <ul>
+      <li><a [routerLink]="['/first/one']">first/one</a></li>
+      <li><a [routerLink]="['/first/two']">first/two</a></li>
+    </ul>
+  </li>
+  <li>
+    <a [routerLink]="['/second']">second</a>
+  </li>
+</ul>
+<router-outlet></router-outlet>
