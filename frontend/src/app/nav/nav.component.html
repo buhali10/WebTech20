@@ -1,12 +1,12 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" fixedInViewport
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false">
+               [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+               [mode]="(isHandset$ | async) ? 'over' : 'side'"
+               [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
+      <a mat-list-item routerLink="/">Home</a>
+      <a mat-list-item routerLink="/table">Tabelle</a>
       <a mat-list-item href="#">Link 3</a>
     </mat-nav-list>
   </mat-sidenav>
@@ -20,8 +20,15 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>frontend</span>
+      <span>Frontend</span>
     </mat-toolbar>
     <!-- Add Content Here -->
+
+    <h1>This is nav-Content</h1>
+    <mat-slider min="1" max="100" step="1" value="1">Mat slider</mat-slider>
+      <!--    <linhb-table></linhb-table>-->
+    <router-outlet></router-outlet>
+
+    <!-- end of nav-Content -->
   </mat-sidenav-content>
 </mat-sidenav-container>

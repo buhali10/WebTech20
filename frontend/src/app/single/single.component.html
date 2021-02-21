@@ -1,0 +1,22 @@
+<form [formGroup]="singleFormGroup" (ngSubmit)="onSubmit(singleFormGroup.value)">
+
+  <mat-form-field appearance="fill">
+    <mat-label>Vorname</mat-label>
+    <input matInput placeholder="Vorname" formControlName="forenameControl">
+  </mat-form-field>
+  <br/>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Nachname</mat-label>
+    <input matInput placeholder="Nachname" formControlName="surnameControl">
+  </mat-form-field>
+  <br/>
+
+  <mat-form-field appearance="fill">
+    <mat-label>E-Mail</mat-label>
+    <input matInput placeholder="E-Mail" formControlName="emailControl">
+  </mat-form-field>
+  <br/>
+
+  <button mat-raised-button type="submit">Change</button>
+</form>
