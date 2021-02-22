@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {BackendService} from '../../shared/backend.service';
 import {Data} from '../../shared/data';
 import {ActivatedRoute, Router} from '@angular/router';
@@ -10,7 +10,7 @@ import {NgbModal, NgbModalConfig} from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-read',
   templateUrl: './read.component.html',
-  styleUrls: ['./read.component.css'],
+  styleUrls: ['./read.component.css']
 })
 export class ReadComponent implements OnInit {
   members: Data[];
@@ -27,7 +27,7 @@ export class ReadComponent implements OnInit {
     private router: Router,
     config: NgbModalConfig,
     private modalService: NgbModal,
-    private fb: FormBuilder,
+    private fb: FormBuilder
   ) {
     // Konfiguration des modalen Dialogs
     config.backdrop = 'static';   // schliesst nicht, wenn man in das Fenster dahinter klickt
@@ -47,7 +47,8 @@ export class ReadComponent implements OnInit {
     this.selectedId = Number(this.route.snapshot.paramMap.get('id'));
     if (this.selectedId === 0) {
       this.readAll();
-    } else {
+    }
+    else {
       console.log('id = ' + this.selectedId);   // nur fuer debug
       this.readOne(this.selectedId);
     }

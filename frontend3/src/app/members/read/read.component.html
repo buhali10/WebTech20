@@ -1,5 +1,4 @@
 <div *ngIf="selectedId == 0" class="container">
-  <h2>All members</h2>
   <table class="table table-striped table-hover">
     <caption>List of Members</caption>
     <thead>
@@ -9,6 +8,7 @@
       <th>Nachname</th>
       <th>E-Mail</th>
       <th>Edit</th>
+      <th>Delete</th>
     </tr>
     </thead>
     <tbody>
@@ -17,12 +17,13 @@
       <td>{{member.firstname}}</td>
       <td>{{member.lastname}}</td>
       <td>{{member.email}}</td>
-      <td><a [routerLink]="['/read/', member.id]"><i-bs
-        name="pencil-square"
-        class="text-secondary"
-        width="1rem"
-        height="1rem">
-      </i-bs></a></td>
+      <td><a [routerLink]="['/read/', member.id]">
+        <i-bs
+          name="pencil-square"
+          class="text-secondary"
+          width="1em"
+          height="1em">
+        </i-bs></a></td>
       <td><i-bs
         name="trash"
         class="text-secondary"
@@ -35,16 +36,22 @@
   </table>
 </div>
 <div *ngIf="selectedId > 0" class="container">
+  <h1>{{ selectedId }}</h1>
   <div *ngIf="error">
-    <h1>{{ selectedId }}</h1>
     <p>{{ error?.message }}</p>
     <p>{{ error?.status }}</p>
-    <p><a [routerLink]="['/read']">Zurück zur Tabelle</a></p>
   </div>
   <div *ngIf="member">
+    <!--<p>{{ member?.id }}</p>
+    <p>{{ member?.firstname }}</p>
+    <p>{{ member?.lastname }}</p>
+    <p>{{ member?.email }}</p>
+    <app-form [data]="member"></app-form>-->
     <app-form [data]="member" (updateEvent)="update($event)"></app-form>
   </div>
+  <p><a [routerLink]="['/read']">Zurück zur Tabelle</a></p>
 </div>
+
 <!-- modaler Dialog fuer das Loeschen -->
 
 <ng-template #content let-modal>
